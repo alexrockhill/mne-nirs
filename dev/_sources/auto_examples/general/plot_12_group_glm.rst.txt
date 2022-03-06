@@ -436,7 +436,7 @@ and that the responses look to be contralateral to the tapping hand.
            <script type="text/javascript" data-lets-plot-script="library" src="https://cdn.jsdelivr.net/gh/JetBrains/lets-plot@v2.2.1/js-package/distr/lets-plot.min.js"></script>
        </head>
        <body>
-              <div id="WkIviH"></div>
+              <div id="kgBrAY"></div>
        <script type="text/javascript" data-lets-plot-script="plot">
            var plotSpec={
     "data":{
@@ -487,7 +487,7 @@ and that the responses look to be contralateral to the tapping hand.
     }
     }]
     };
-           var plotContainer = document.getElementById("WkIviH");
+           var plotContainer = document.getElementById("kgBrAY");
            LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
        </script>
        </body>
@@ -769,7 +769,7 @@ Filled symbols represent HbO, unfilled symbols represent HbR.
            <script type="text/javascript" data-lets-plot-script="library" src="https://cdn.jsdelivr.net/gh/JetBrains/lets-plot@v2.2.1/js-package/distr/lets-plot.min.js"></script>
        </head>
        <body>
-              <div id="FDhQeq"></div>
+              <div id="5ggOUl"></div>
        <script type="text/javascript" data-lets-plot-script="plot">
            var plotSpec={
     "data":{
@@ -843,7 +843,7 @@ Filled symbols represent HbO, unfilled symbols represent HbR.
     "shape":2
     }]
     };
-           var plotContainer = document.getElementById("FDhQeq");
+           var plotContainer = document.getElementById("5ggOUl");
            LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
        </script>
        </body>
@@ -1886,9 +1886,9 @@ hand of tapping and most likely originate from the primary motor cortex.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  39.454 seconds)
+   **Total running time of the script:** ( 0 minutes  39.284 seconds)
 
-**Estimated memory usage:**  418 MB
+**Estimated memory usage:**  472 MB
 
 
 .. _sphx_glr_download_auto_examples_general_plot_12_group_glm.py:

@@ -269,7 +269,7 @@ it matches well to the data.
  .. code-block:: none
 
 
-    ([<matplotlib.axis.XTick object at 0x7fc9f869aee0>, <matplotlib.axis.XTick object at 0x7fc9f869ae20>, <matplotlib.axis.XTick object at 0x7fc9f87c8b50>, <matplotlib.axis.XTick object at 0x7fca5f34e430>, <matplotlib.axis.XTick object at 0x7fca7e5a3bb0>, <matplotlib.axis.XTick object at 0x7fca7e543310>, <matplotlib.axis.XTick object at 0x7fca7e42b220>], [Text(0, 0, '0.0'), Text(1, 0, '0.1'), Text(2, 0, '0.2'), Text(3, 0, '0.3'), Text(4, 0, '0.4'), Text(5, 0, '0.5'), Text(6, 0, '0.6')])
+    ([<matplotlib.axis.XTick object at 0x7fb086d663a0>, <matplotlib.axis.XTick object at 0x7fb086d66f10>, <matplotlib.axis.XTick object at 0x7fb086afaf40>, <matplotlib.axis.XTick object at 0x7fb08682cee0>, <matplotlib.axis.XTick object at 0x7fb08682c190>, <matplotlib.axis.XTick object at 0x7fb067824b20>, <matplotlib.axis.XTick object at 0x7fb05da0e280>], [Text(0, 0, '0.0'), Text(1, 0, '0.1'), Text(2, 0, '0.2'), Text(3, 0, '0.3'), Text(4, 0, '0.4'), Text(5, 0, '0.5'), Text(6, 0, '0.6')])
 
 
 
@@ -379,7 +379,7 @@ Bibliography
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  4.858 seconds)
+   **Total running time of the script:** ( 0 minutes  3.807 seconds)
 
 **Estimated memory usage:**  9 MB
 
