@@ -128,7 +128,7 @@ We then convert the data to optical density and plot the raw signal.
 
     Loading /home/circleci/mne_data/MNE-fNIRS-motor-data/Participant-1
 
-    <mne_qt_browser._pg_figure.PyQtGraphBrowser object at 0x7fb068051550>
+    <mne_qt_browser._pg_figure.PyQtGraphBrowser object at 0x7f25c441ad30>
 
 
 
@@ -241,7 +241,7 @@ channels are now displayed in grey to indicate they are bad.
  .. code-block:: none
 
 
-    <mne_qt_browser._pg_figure.PyQtGraphBrowser object at 0x7fb0007b5040>
+    <mne_qt_browser._pg_figure.PyQtGraphBrowser object at 0x7f25c4399700>
 
 
 
@@ -460,7 +460,7 @@ has been added.
  .. code-block:: none
 
 
-    <mne_qt_browser._pg_figure.PyQtGraphBrowser object at 0x7fb000531d30>
+    <mne_qt_browser._pg_figure.PyQtGraphBrowser object at 0x7f26466aa0d0>
 
 
 
@@ -548,7 +548,7 @@ on S2-D4).
  .. code-block:: none
 
 
-    <mne_qt_browser._pg_figure.PyQtGraphBrowser object at 0x7fafdc6180d0>
+    <mne_qt_browser._pg_figure.PyQtGraphBrowser object at 0x7f2627caa3a0>
 
 
 
@@ -583,7 +583,7 @@ and bad time segments are marked in red.
  .. code-block:: none
 
 
-    <mne_qt_browser._pg_figure.PyQtGraphBrowser object at 0x7fafdc6a93a0>
+    <mne_qt_browser._pg_figure.PyQtGraphBrowser object at 0x7f261d435af0>
 
 
 
@@ -603,9 +603,9 @@ are treated in downstream analysis.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  26.004 seconds)
+   **Total running time of the script:** ( 0 minutes  26.426 seconds)
 
-**Estimated memory usage:**  13 MB
+**Estimated memory usage:**  14 MB
 
 
 .. _sphx_glr_download_auto_examples_general_plot_22_quality.py:

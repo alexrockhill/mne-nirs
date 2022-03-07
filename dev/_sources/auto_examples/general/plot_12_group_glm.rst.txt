@@ -64,12 +64,9 @@ information about triggers, condition names, etc.
    This tutorial uses data in the BIDS format.
    The BIDS specification for NIRS data is still under development. See:
    `fNIRS BIDS proposal <https://github.com/bids-standard/bids-specification/pull/802>`_.
-   As such, to run this tutorial you must use the fNIRS development branch of MNE-BIDS.
+   As such, to run this tutorial you must use the MNE-BIDS 0.10 or later.
 
-   To install the fNIRS development branch of MNE-BIDS run:
-   `pip install -U https://codeload.github.com/rob-luke/mne-bids/zip/nirs`.
-
-   MNE-Python. allows you to process fNIRS data that is not in BIDS format too.
+   MNE-Python allows you to process fNIRS data that is not in BIDS format too.
    Simply modify the ``read_raw_`` function to match your data type.
    See :ref:`data importing tutorial <tut-importing-fnirs-data>` to learn how
    to use your data with MNE-Python.
@@ -89,7 +86,7 @@ information about triggers, condition names, etc.
    :local:
    :depth: 2
 
-.. GENERATED FROM PYTHON SOURCE LINES 73-111
+.. GENERATED FROM PYTHON SOURCE LINES 70-108
 
 .. code-block:: default
 
@@ -138,7 +135,7 @@ information about triggers, condition names, etc.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 112-126
+.. GENERATED FROM PYTHON SOURCE LINES 109-123
 
 Set up directories
 ------------------
@@ -155,7 +152,7 @@ without manually specifying the trigger names etc.
 We first define where the root directory of our dataset is.
 In this example we use the example dataset ``fnirs_motor_group``.
 
-.. GENERATED FROM PYTHON SOURCE LINES 126-131
+.. GENERATED FROM PYTHON SOURCE LINES 123-128
 
 .. code-block:: default
 
@@ -177,14 +174,14 @@ In this example we use the example dataset ``fnirs_motor_group``.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 132-136
+.. GENERATED FROM PYTHON SOURCE LINES 129-133
 
 And as we are using MNE-BIDS we can create a BIDSPath object.
 This class helps to handle all the path wrangling.
 We inform the software that we are analysing nirs data that is saved in
 the snirf format.
 
-.. GENERATED FROM PYTHON SOURCE LINES 136-142
+.. GENERATED FROM PYTHON SOURCE LINES 133-139
 
 .. code-block:: default
 
@@ -207,11 +204,11 @@ the snirf format.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 143-144
+.. GENERATED FROM PYTHON SOURCE LINES 140-141
 
 For example we can automatically query the subjects, tasks, and sessions.
 
-.. GENERATED FROM PYTHON SOURCE LINES 144-149
+.. GENERATED FROM PYTHON SOURCE LINES 141-146
 
 .. code-block:: default
 
@@ -233,7 +230,7 @@ For example we can automatically query the subjects, tasks, and sessions.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 150-183
+.. GENERATED FROM PYTHON SOURCE LINES 147-180
 
 Define individual analysis
 --------------------------
@@ -269,7 +266,7 @@ analyses.
    for more information. In the meantime use the following code to replace the
    illegal characters.
 
-.. GENERATED FROM PYTHON SOURCE LINES 183-249
+.. GENERATED FROM PYTHON SOURCE LINES 180-246
 
 .. code-block:: default
 
@@ -346,7 +343,7 @@ analyses.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 250-257
+.. GENERATED FROM PYTHON SOURCE LINES 247-254
 
 Run analysis on all participants
 --------------------------------
@@ -356,7 +353,7 @@ on each. We append the individual results in to a large dataframe that
 will contain the results from all measurements. We create a group dataframe
 for the region of interest, channel level, and contrast results.
 
-.. GENERATED FROM PYTHON SOURCE LINES 257-276
+.. GENERATED FROM PYTHON SOURCE LINES 254-273
 
 .. code-block:: default
 
@@ -396,7 +393,7 @@ for the region of interest, channel level, and contrast results.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 277-286
+.. GENERATED FROM PYTHON SOURCE LINES 274-283
 
 Visualise Individual results
 ----------------------------
@@ -408,7 +405,7 @@ values and observe they are in the expect range.
 We can already see that the control condition is always near zero,
 and that the responses look to be contralateral to the tapping hand.
 
-.. GENERATED FROM PYTHON SOURCE LINES 286-297
+.. GENERATED FROM PYTHON SOURCE LINES 283-294
 
 .. code-block:: default
 
@@ -436,7 +433,7 @@ and that the responses look to be contralateral to the tapping hand.
            <script type="text/javascript" data-lets-plot-script="library" src="https://cdn.jsdelivr.net/gh/JetBrains/lets-plot@v2.2.1/js-package/distr/lets-plot.min.js"></script>
        </head>
        <body>
-              <div id="kgBrAY"></div>
+              <div id="PHpGvZ"></div>
        <script type="text/javascript" data-lets-plot-script="plot">
            var plotSpec={
     "data":{
@@ -487,7 +484,7 @@ and that the responses look to be contralateral to the tapping hand.
     }
     }]
     };
-           var plotContainer = document.getElementById("kgBrAY");
+           var plotContainer = document.getElementById("PHpGvZ");
            LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
        </script>
        </body>
@@ -496,7 +493,7 @@ and that the responses look to be contralateral to the tapping hand.
     <br />
     <br />
 
-.. GENERATED FROM PYTHON SOURCE LINES 298-329
+.. GENERATED FROM PYTHON SOURCE LINES 295-326
 
 Compute group level results
 ---------------------------
@@ -530,7 +527,7 @@ Alternatively, we could use a robust linear
 model by using the code
 `roi_model = rlm('theta ~ -1 + ROI:Condition:Chroma', grp_results).fit()`.
 
-.. GENERATED FROM PYTHON SOURCE LINES 329-337
+.. GENERATED FROM PYTHON SOURCE LINES 326-334
 
 .. code-block:: default
 
@@ -625,7 +622,7 @@ model by using the code
     <br />
     <br />
 
-.. GENERATED FROM PYTHON SOURCE LINES 338-359
+.. GENERATED FROM PYTHON SOURCE LINES 335-356
 
 Second level analysis with covariates
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -649,7 +646,7 @@ are smaller when the right hand was used (as expected for these
 contralaterally dominant responses) and there is no significant
 effect of gender.
 
-.. GENERATED FROM PYTHON SOURCE LINES 359-368
+.. GENERATED FROM PYTHON SOURCE LINES 356-365
 
 .. code-block:: default
 
@@ -711,7 +708,7 @@ effect of gender.
     <br />
     <br />
 
-.. GENERATED FROM PYTHON SOURCE LINES 369-380
+.. GENERATED FROM PYTHON SOURCE LINES 366-377
 
 Visualise group results
 -----------------------
@@ -725,7 +722,7 @@ We also observe the the tapping response is
 larger in the contralateral hemisphere.
 Filled symbols represent HbO, unfilled symbols represent HbR.
 
-.. GENERATED FROM PYTHON SOURCE LINES 380-400
+.. GENERATED FROM PYTHON SOURCE LINES 377-397
 
 .. code-block:: default
 
@@ -769,7 +766,7 @@ Filled symbols represent HbO, unfilled symbols represent HbR.
            <script type="text/javascript" data-lets-plot-script="library" src="https://cdn.jsdelivr.net/gh/JetBrains/lets-plot@v2.2.1/js-package/distr/lets-plot.min.js"></script>
        </head>
        <body>
-              <div id="5ggOUl"></div>
+              <div id="Xn3NyS"></div>
        <script type="text/javascript" data-lets-plot-script="plot">
            var plotSpec={
     "data":{
@@ -843,7 +840,7 @@ Filled symbols represent HbO, unfilled symbols represent HbR.
     "shape":2
     }]
     };
-           var plotContainer = document.getElementById("5ggOUl");
+           var plotContainer = document.getElementById("Xn3NyS");
            LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
        </script>
        </body>
@@ -852,7 +849,7 @@ Filled symbols represent HbO, unfilled symbols represent HbR.
     <br />
     <br />
 
-.. GENERATED FROM PYTHON SOURCE LINES 401-410
+.. GENERATED FROM PYTHON SOURCE LINES 398-407
 
 Group topographic visualisation
 -------------------------------
@@ -864,7 +861,7 @@ First we compute the mixed effects model for each channel (rather
 than region of interest as above).
 Then we pass these results to the topomap function.
 
-.. GENERATED FROM PYTHON SOURCE LINES 410-454
+.. GENERATED FROM PYTHON SOURCE LINES 407-451
 
 .. code-block:: default
 
@@ -930,7 +927,7 @@ Then we pass these results to the topomap function.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 455-461
+.. GENERATED FROM PYTHON SOURCE LINES 452-458
 
 Contrasts
 ---------
@@ -939,7 +936,7 @@ Finally we can examine the difference between the left and right hand
 tapping conditions by viewing the contrast results
 in a topographic representation.
 
-.. GENERATED FROM PYTHON SOURCE LINES 461-476
+.. GENERATED FROM PYTHON SOURCE LINES 458-473
 
 .. code-block:: default
 
@@ -980,13 +977,13 @@ in a topographic representation.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 477-480
+.. GENERATED FROM PYTHON SOURCE LINES 474-477
 
 Or we can view only the left hemisphere for the contrast.
 And set all channels that dont have a significant response to zero.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 481-486
+.. GENERATED FROM PYTHON SOURCE LINES 478-483
 
 .. code-block:: default
 
@@ -1014,7 +1011,7 @@ And set all channels that dont have a significant response to zero.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 487-501
+.. GENERATED FROM PYTHON SOURCE LINES 484-498
 
 Cortical Surface Projections
 ----------------------------
@@ -1031,7 +1028,7 @@ fashion.
 As in the topo plots above you can see that the activity is predominately
 contralateral to the side of finger tapping.
 
-.. GENERATED FROM PYTHON SOURCE LINES 501-528
+.. GENERATED FROM PYTHON SOURCE LINES 498-525
 
 .. code-block:: default
 
@@ -1091,7 +1088,7 @@ contralateral to the side of finger tapping.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 529-534
+.. GENERATED FROM PYTHON SOURCE LINES 526-531
 
 Table of channel level results
 ------------------------------
@@ -1099,7 +1096,7 @@ Table of channel level results
 Sometimes a reviewer wants a long table of results per channel.
 This can be generated from the statistics dataframe.
 
-.. GENERATED FROM PYTHON SOURCE LINES 534-552
+.. GENERATED FROM PYTHON SOURCE LINES 531-549
 
 .. code-block:: default
 
@@ -1638,7 +1635,7 @@ This can be generated from the statistics dataframe.
     <br />
     <br />
 
-.. GENERATED FROM PYTHON SOURCE LINES 553-579
+.. GENERATED FROM PYTHON SOURCE LINES 550-576
 
 .. _tut-fnirs-group-relating:
 
@@ -1667,7 +1664,7 @@ MNE-NIRS does not distribute the fOLD toolbox or the data
 that they provide. See the Notes section of
 :func:`mne_nirs.io.fold_channel_specificity` for more information.
 
-.. GENERATED FROM PYTHON SOURCE LINES 579-584
+.. GENERATED FROM PYTHON SOURCE LINES 576-581
 
 .. code-block:: default
 
@@ -1697,7 +1694,7 @@ that they provide. See the Notes section of
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 585-590
+.. GENERATED FROM PYTHON SOURCE LINES 582-587
 
 Next we use information from the fOLD toolbox to report the
 channel specificity to different brain regions.
@@ -1705,7 +1702,7 @@ For licensing reasons, these files are not distributed with MNE-NIRS.
 To set up your system to use the fOLD functions, see the Notes section of
 :func:`mne_nirs.io.fold_channel_specificity`.
 
-.. GENERATED FROM PYTHON SOURCE LINES 591-596
+.. GENERATED FROM PYTHON SOURCE LINES 588-593
 
 .. code-block:: default
 
@@ -1866,14 +1863,14 @@ To set up your system to use the fOLD functions, see the Notes section of
     <br />
     <br />
 
-.. GENERATED FROM PYTHON SOURCE LINES 597-601
+.. GENERATED FROM PYTHON SOURCE LINES 594-598
 
 We observe that the channel with the largest response to tapping
 had the greatest specificity to the Precentral Gyrus, which is
 the site of the primary motor cortex. This is consistent
 with the expectation for a finger tapping task.
 
-.. GENERATED FROM PYTHON SOURCE LINES 605-612
+.. GENERATED FROM PYTHON SOURCE LINES 602-609
 
 Conclusion
 ----------
@@ -1886,9 +1883,9 @@ hand of tapping and most likely originate from the primary motor cortex.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  39.284 seconds)
+   **Total running time of the script:** ( 0 minutes  33.279 seconds)
 
-**Estimated memory usage:**  472 MB
+**Estimated memory usage:**  505 MB
 
 
 .. _sphx_glr_download_auto_examples_general_plot_12_group_glm.py:

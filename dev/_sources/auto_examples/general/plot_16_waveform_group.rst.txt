@@ -66,12 +66,9 @@ information about triggers, condition names, etc.
    This tutorial uses data in the BIDS format.
    The BIDS specification for NIRS data is still under development. See:
    `fNIRS BIDS proposal <https://github.com/bids-standard/bids-specification/pull/802>`_.
-   As such, to run this tutorial you must use the fNIRS development branch of MNE-BIDS.
+   As such, to run this tutorial you must use the MNE-BIDS 0.10 or later.
 
-   To install the fNIRS development branch of MNE-BIDS run:
-   `pip install -U https://codeload.github.com/rob-luke/mne-bids/zip/nirs`.
-
-   MNE-Python. allows you to process fNIRS data that is not in BIDS format too.
+   MNE-Python allows you to process fNIRS data that is not in BIDS format too.
    Simply modify the ``read_raw_`` function to match your data type.
    See :ref:`data importing tutorial <tut-importing-fnirs-data>` to learn how
    to use your data with MNE-Python.
@@ -92,7 +89,7 @@ information about triggers, condition names, etc.
    :local:
    :depth: 2
 
-.. GENERATED FROM PYTHON SOURCE LINES 76-116
+.. GENERATED FROM PYTHON SOURCE LINES 73-113
 
 .. code-block:: default
 
@@ -143,7 +140,7 @@ information about triggers, condition names, etc.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 117-131
+.. GENERATED FROM PYTHON SOURCE LINES 114-128
 
 Define individual analysis
 --------------------------
@@ -160,7 +157,7 @@ This is the same waveform analysis as described in the
 and :ref:`artifact correction tutorial <ex-fnirs-artifacts>`.
 As such, this example will skim over the individual-level details.
 
-.. GENERATED FROM PYTHON SOURCE LINES 131-168
+.. GENERATED FROM PYTHON SOURCE LINES 128-165
 
 .. code-block:: default
 
@@ -208,7 +205,7 @@ As such, this example will skim over the individual-level details.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 169-178
+.. GENERATED FROM PYTHON SOURCE LINES 166-175
 
 Run analysis on all data
 ------------------------
@@ -220,7 +217,7 @@ then averaged to obtain an evoked response from each participant.
 The individual-evoked data is stored in a
 dictionary (`all_evokeds`) for each condition.
 
-.. GENERATED FROM PYTHON SOURCE LINES 178-196
+.. GENERATED FROM PYTHON SOURCE LINES 175-193
 
 .. code-block:: default
 
@@ -250,15 +247,15 @@ dictionary (`all_evokeds`) for each condition.
 
  .. code-block:: none
 
-    /home/circleci/project/examples/general/plot_16_waveform_group.py:142: RuntimeWarning: No bad channels to interpolate. Doing nothing...
+    /home/circleci/project/examples/general/plot_16_waveform_group.py:139: RuntimeWarning: No bad channels to interpolate. Doing nothing...
       raw_od.interpolate_bads()
-    /home/circleci/project/examples/general/plot_16_waveform_group.py:142: RuntimeWarning: No bad channels to interpolate. Doing nothing...
+    /home/circleci/project/examples/general/plot_16_waveform_group.py:139: RuntimeWarning: No bad channels to interpolate. Doing nothing...
       raw_od.interpolate_bads()
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 197-202
+.. GENERATED FROM PYTHON SOURCE LINES 194-199
 
 The end result is a dictionary that is indexed per condition,
 with each item in the dictionary being a list of evoked responses.
@@ -266,7 +263,7 @@ See below that for each condition we have obtained a MNE evoked type
 that is generated from the average of all 30 trials and epoched from -5 to
 20 seconds.
 
-.. GENERATED FROM PYTHON SOURCE LINES 202-205
+.. GENERATED FROM PYTHON SOURCE LINES 199-202
 
 .. code-block:: default
 
@@ -301,7 +298,7 @@ that is generated from the average of all 30 trials and epoched from -5 to
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 206-212
+.. GENERATED FROM PYTHON SOURCE LINES 203-209
 
 View average waveform
 ---------------------
@@ -310,7 +307,7 @@ Next, a grand average epoch waveform is generated for each condition.
 This is generated using all of the standard (long) fNIRS channels,
 as illustrated by the head inset in the top right corner of the figure.
 
-.. GENERATED FROM PYTHON SOURCE LINES 212-226
+.. GENERATED FROM PYTHON SOURCE LINES 209-223
 
 .. code-block:: default
 
@@ -342,18 +339,18 @@ as illustrated by the head inset in the top right corner of the figure.
  .. code-block:: none
 
 
-    <matplotlib.legend.Legend object at 0x7fb05dc613d0>
+    <matplotlib.legend.Legend object at 0x7f24cc544610>
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 227-231
+.. GENERATED FROM PYTHON SOURCE LINES 224-228
 
 From this figure we observe that the response to the tapping condition
 with the right hand appears larger than when no tapping occurred in the
 control condition (similar for when tapping occurred with the left hand).
 We test if this is the case in the analysis below.
 
-.. GENERATED FROM PYTHON SOURCE LINES 234-257
+.. GENERATED FROM PYTHON SOURCE LINES 231-254
 
 Generate regions of interest
 --------------------------------
@@ -379,7 +376,7 @@ In this example, two ROIs are generated. One for the left motor cortex
 and one for the right motor cortex. These are called `Left_Hemisphere` and
 `Right_Hemisphere` and are stored in the `rois` dictionary.
 
-.. GENERATED FROM PYTHON SOURCE LINES 257-268
+.. GENERATED FROM PYTHON SOURCE LINES 254-265
 
 .. code-block:: default
 
@@ -408,7 +405,7 @@ and one for the right motor cortex. These are called `Left_Hemisphere` and
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 269-275
+.. GENERATED FROM PYTHON SOURCE LINES 266-272
 
 Create average waveform per ROI
 -------------------------------
@@ -417,7 +414,7 @@ Next, an average waveform is generated per condition per region of interest.
 This allows the researcher to view the responses elicited in different
 regions of the brain for each condition.
 
-.. GENERATED FROM PYTHON SOURCE LINES 275-298
+.. GENERATED FROM PYTHON SOURCE LINES 272-295
 
 .. code-block:: default
 
@@ -458,17 +455,17 @@ regions of the brain for each condition.
  .. code-block:: none
 
 
-    <matplotlib.legend.Legend object at 0x7fb05dc45fa0>
+    <matplotlib.legend.Legend object at 0x7f25c44bdf10>
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 299-302
+.. GENERATED FROM PYTHON SOURCE LINES 296-299
 
 From this figure we observe that the response to tapping appears
 largest in the brain region that is contralateral to the hand
 that is tapping. We test if this is the case in the analysis below.
 
-.. GENERATED FROM PYTHON SOURCE LINES 305-316
+.. GENERATED FROM PYTHON SOURCE LINES 302-313
 
 Extract evoked amplitude
 ------------------------
@@ -482,7 +479,7 @@ chromophore. The data is then stored in a dataframe, which is saved
 to a csv file for easy analysis in any statistical analysis software.
 We also demonstrate two example analyses on these values below.
 
-.. GENERATED FROM PYTHON SOURCE LINES 316-345
+.. GENERATED FROM PYTHON SOURCE LINES 313-342
 
 .. code-block:: default
 
@@ -596,7 +593,7 @@ We also demonstrate two example analyses on these values below.
     <br />
     <br />
 
-.. GENERATED FROM PYTHON SOURCE LINES 346-358
+.. GENERATED FROM PYTHON SOURCE LINES 343-355
 
 View individual results
 -----------------------
@@ -611,7 +608,7 @@ skull thickness, both of which vary across the head and across participants.
 For this reason, fNIRS is most appropriate for detecting changes within a
 single ROI between conditions.
 
-.. GENERATED FROM PYTHON SOURCE LINES 358-367
+.. GENERATED FROM PYTHON SOURCE LINES 355-364
 
 .. code-block:: default
 
@@ -637,7 +634,7 @@ single ROI between conditions.
            <script type="text/javascript" data-lets-plot-script="library" src="https://cdn.jsdelivr.net/gh/JetBrains/lets-plot@v2.2.1/js-package/distr/lets-plot.min.js"></script>
        </head>
        <body>
-              <div id="WVUV4n"></div>
+              <div id="XvTXqk"></div>
        <script type="text/javascript" data-lets-plot-script="plot">
            var plotSpec={
     "data":{
@@ -685,7 +682,7 @@ single ROI between conditions.
     }
     }]
     };
-           var plotContainer = document.getElementById("WVUV4n");
+           var plotContainer = document.getElementById("XvTXqk");
            LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
        </script>
        </body>
@@ -694,7 +691,7 @@ single ROI between conditions.
     <br />
     <br />
 
-.. GENERATED FROM PYTHON SOURCE LINES 368-376
+.. GENERATED FROM PYTHON SOURCE LINES 365-373
 
 Research question 1: Comparison of conditions
 ---------------------------------------------------------------------------------------------------
@@ -705,7 +702,7 @@ than the response when not tapping (control)?
 For this token example we subset the dataframe and then apply the mixed
 effect model.
 
-.. GENERATED FROM PYTHON SOURCE LINES 376-385
+.. GENERATED FROM PYTHON SOURCE LINES 373-382
 
 .. code-block:: default
 
@@ -764,13 +761,13 @@ effect model.
     <br />
     <br />
 
-.. GENERATED FROM PYTHON SOURCE LINES 386-389
+.. GENERATED FROM PYTHON SOURCE LINES 383-386
 
 The model indicates that for the oxyhaemoglobin (HbO) data in the left
 ROI, that the tapping condition with the right hand evokes
 a 9.0 μMol larger response than the control condition.
 
-.. GENERATED FROM PYTHON SOURCE LINES 392-402
+.. GENERATED FROM PYTHON SOURCE LINES 389-399
 
 Research question 2: Are responses larger on the contralateral side to tapping?
 -------------------------------------------------------------------------------
@@ -783,7 +780,7 @@ First, the ROI data in the dataframe is encoded as ipsi- and contralateral
 to the tapping hand. Then the data is subset to just examine the two tapping
 conditions and the model is applied.
 
-.. GENERATED FROM PYTHON SOURCE LINES 402-423
+.. GENERATED FROM PYTHON SOURCE LINES 399-420
 
 .. code-block:: default
 
@@ -854,7 +851,7 @@ conditions and the model is applied.
     <br />
     <br />
 
-.. GENERATED FROM PYTHON SOURCE LINES 424-427
+.. GENERATED FROM PYTHON SOURCE LINES 421-424
 
 The model indicates that for the oxyhaemoglobin (HbO) data, the ipsilateral
 responses are 4.2 μMol smaller than those on the contralateral side to the
@@ -863,7 +860,7 @@ hand that is tapping.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  10.074 seconds)
+   **Total running time of the script:** ( 0 minutes  11.190 seconds)
 
 **Estimated memory usage:**  9 MB
 

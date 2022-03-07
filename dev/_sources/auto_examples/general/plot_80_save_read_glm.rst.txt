@@ -48,16 +48,13 @@ information about triggers, condition names, etc.
 
    The BIDS specification for NIRS data is still under development. See:
    `fNIRS BIDS proposal <https://github.com/bids-standard/bids-specification/pull/802>`_.
-   As such, you must use the development branch of MNE-BIDS.
-
-   To install the fNIRS development branch of MNE-BIDS run:
-   `pip install https://codeload.github.com/rob-luke/mne-bids/zip/nirs`
+   As such, to run this tutorial you must use the MNE-BIDS 0.10 or later.
 
 .. contents:: Page contents
    :local:
    :depth: 2
 
-.. GENERATED FROM PYTHON SOURCE LINES 41-62
+.. GENERATED FROM PYTHON SOURCE LINES 38-59
 
 .. code-block:: default
 
@@ -89,7 +86,7 @@ information about triggers, condition names, etc.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 63-72
+.. GENERATED FROM PYTHON SOURCE LINES 60-69
 
 Set up directories
 ------------------
@@ -101,7 +98,7 @@ as described above.
 
 We first define the root directory of our dataset.
 
-.. GENERATED FROM PYTHON SOURCE LINES 72-77
+.. GENERATED FROM PYTHON SOURCE LINES 69-74
 
 .. code-block:: default
 
@@ -123,12 +120,12 @@ We first define the root directory of our dataset.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 78-80
+.. GENERATED FROM PYTHON SOURCE LINES 75-77
 
 And as we are using MNE-BIDS we can create a BIDSPath.
 This helps to handle all the path wrangling.
 
-.. GENERATED FROM PYTHON SOURCE LINES 80-85
+.. GENERATED FROM PYTHON SOURCE LINES 77-82
 
 .. code-block:: default
 
@@ -150,11 +147,11 @@ This helps to handle all the path wrangling.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 86-87
+.. GENERATED FROM PYTHON SOURCE LINES 83-84
 
 For example we can automatically query the subjects, tasks, and sessions.
 
-.. GENERATED FROM PYTHON SOURCE LINES 87-92
+.. GENERATED FROM PYTHON SOURCE LINES 84-89
 
 .. code-block:: default
 
@@ -176,11 +173,11 @@ For example we can automatically query the subjects, tasks, and sessions.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 93-94
+.. GENERATED FROM PYTHON SOURCE LINES 90-91
 
 But for this example we will only process the first two subjects
 
-.. GENERATED FROM PYTHON SOURCE LINES 94-97
+.. GENERATED FROM PYTHON SOURCE LINES 91-94
 
 .. code-block:: default
 
@@ -194,7 +191,7 @@ But for this example we will only process the first two subjects
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 98-105
+.. GENERATED FROM PYTHON SOURCE LINES 95-102
 
 Define individual analysis
 --------------------------
@@ -204,7 +201,7 @@ This is a GLM analysis as described in the
 :ref:`individual GLM tutorial <tut-fnirs-hrf>`,
 so this example will skim over the individual level details.
 
-.. GENERATED FROM PYTHON SOURCE LINES 105-118
+.. GENERATED FROM PYTHON SOURCE LINES 102-115
 
 .. code-block:: default
 
@@ -228,7 +225,7 @@ so this example will skim over the individual level details.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 119-124
+.. GENERATED FROM PYTHON SOURCE LINES 116-121
 
 Run analysis and save to disk
 -----------------------------
@@ -236,7 +233,7 @@ Run analysis and save to disk
 Next we loop through the five measurements and run the individual analysis
 on each. We will then save the GLM results to disk as ``.h5`` files.
 
-.. GENERATED FROM PYTHON SOURCE LINES 124-151
+.. GENERATED FROM PYTHON SOURCE LINES 121-148
 
 .. code-block:: default
 
@@ -274,14 +271,14 @@ on each. We will then save the GLM results to disk as ``.h5`` files.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 152-156
+.. GENERATED FROM PYTHON SOURCE LINES 149-153
 
 Reload results and extract summary statistics
 ---------------------------------------------
 
 Next we loop through the five measurements and reload all the results.
 
-.. GENERATED FROM PYTHON SOURCE LINES 156-178
+.. GENERATED FROM PYTHON SOURCE LINES 153-175
 
 .. code-block:: default
 
@@ -314,7 +311,7 @@ Next we loop through the five measurements and reload all the results.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 179-184
+.. GENERATED FROM PYTHON SOURCE LINES 176-181
 
 View the resulting dataframe
 ----------------------------
@@ -322,7 +319,7 @@ View the resulting dataframe
 Finally we can view the resulting dataframe which contains data from all
 subjects.
 
-.. GENERATED FROM PYTHON SOURCE LINES 184-186
+.. GENERATED FROM PYTHON SOURCE LINES 181-183
 
 .. code-block:: default
 
@@ -557,7 +554,7 @@ subjects.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  8.448 seconds)
+   **Total running time of the script:** ( 0 minutes  8.576 seconds)
 
 **Estimated memory usage:**  15 MB
 
