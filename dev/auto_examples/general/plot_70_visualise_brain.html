@@ -223,151 +223,135 @@ function checkPageExistsAndRedirect(event) {
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
-    <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="plot_01_data_io.html">
-   Importing Data From fNIRS Devices
+    <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="index.html">
+   Analysis examples
   </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="plot_01_data_io.html">
+     Importing Data From fNIRS Devices
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="plot_05_datasets.html">
+     Example Datasets
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="plot_10_hrf_simulation.html">
+     GLM Analysis (Simulated)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="plot_11_hrf_measured.html">
+     GLM Analysis (Measured)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="plot_12_group_glm.html">
+     Group Level GLM Analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="plot_13_fir_glm.html">
+     GLM FIR Analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="plot_14_glm_components.html">
+     GLM and Design Matrix Parameters
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="plot_15_waveform.html">
+     Waveform Averaging Analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="plot_16_waveform_group.html">
+     Group Level Waveform Analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="plot_19_snirf.html">
+     SNIRF Support in MNE
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="plot_20_enhance.html">
+     Signal Enhancement Techniques
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="plot_21_artifacts.html">
+     Artifact Correction Techniques
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="plot_22_quality.html">
+     Signal Quality Evaluation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="plot_30_frequency.html">
+     Frequency and Filter Commentary
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="plot_40_mayer.html">
+     Mayer Wave Parametrisation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="plot_50_decoding.html">
+     Decoding Analysis
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Utilising Anatomical Information
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="plot_80_save_read_glm.html">
+     Save and load GLM results
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="plot_99_bad.html">
+     Importance of Controls and Parameter Selection
+    </a>
+   </li>
+  </ul>
  </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="plot_05_datasets.html">
-   Example Datasets
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../migration/index.html">
+   Migrating from other software packages
   </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="plot_10_hrf_simulation.html">
-   GLM Analysis (Simulated)
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="plot_11_hrf_measured.html">
-   GLM Analysis (Measured)
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="plot_12_group_glm.html">
-   Group Level GLM Analysis
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="plot_13_fir_glm.html">
-   GLM FIR Analysis
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="plot_14_glm_components.html">
-   GLM and Design Matrix Parameters
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="plot_15_waveform.html">
-   Waveform Averaging Analysis
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="plot_16_waveform_group.html">
-   Group Level Waveform Analysis
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="plot_19_snirf.html">
-   SNIRF Support in MNE
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="plot_20_enhance.html">
-   Signal Enhancement Techniques
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="plot_21_artifacts.html">
-   Artifact Correction Techniques
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="plot_22_quality.html">
-   Signal Quality Evaluation
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="plot_30_frequency.html">
-   Frequency and Filter Commentary
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="plot_40_mayer.html">
-   Mayer Wave Parametrisation
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="plot_50_decoding.html">
-   Decoding Analysis
-  </a>
- </li>
-</ul>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Utilising Anatomical Information
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="plot_80_save_read_glm.html">
-   Save and load GLM results
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="plot_99_bad.html">
-   Importance of Controls and Parameter Selection
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../migration/plot_01_homer.html">
-   Migrating from Homer to MNE
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../migration/plot_02_nirstoolbox.html">
-   Migrating from nirs-toolbox to MNE
-  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../migration/plot_01_homer.html">
+     Migrating from Homer to MNE
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../migration/plot_02_nirstoolbox.html">
+     Migrating from nirs-toolbox to MNE
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -586,7 +570,7 @@ specify which views to use to show each channel pair:</p>
     <span class="s1">&#39;right-lat&#39;</span><span class="p">:</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.r_.html#numpy.r_" title="numpy.r_" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-data"><span class="n">np</span><span class="o">.</span><span class="n">r_</span></a><span class="p">[</span><a href="https://numpy.org/devdocs/reference/generated/numpy.arange.html#numpy.arange" title="numpy.arange" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">arange</span></a><span class="p">(</span><span class="mi">29</span><span class="p">,</span> <span class="mi">43</span><span class="p">),</span> <span class="mi">44</span><span class="p">],</span>
 <span class="p">}</span>
 
-<a href="https://matplotlib.org/api/figure_api.html#matplotlib.figure.Figure" title="matplotlib.figure.Figure" class="sphx-glr-backref-module-matplotlib-figure sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">fig_montage</span></a> <span class="o">=</span> <a href="../../generated/mne_nirs.visualisation.plot_3d_montage.html#mne_nirs.visualisation.plot_3d_montage" title="mne_nirs.visualisation.plot_3d_montage" class="sphx-glr-backref-module-mne_nirs-visualisation sphx-glr-backref-type-py-function"><span class="n">mne_nirs</span><span class="o">.</span><span class="n">visualisation</span><span class="o">.</span><span class="n">plot_3d_montage</span></a><span class="p">(</span>
+<a href="https://matplotlib.org/stable/api/figure_api.html#matplotlib.figure.Figure" title="matplotlib.figure.Figure" class="sphx-glr-backref-module-matplotlib-figure sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">fig_montage</span></a> <span class="o">=</span> <a href="../../generated/mne_nirs.visualisation.plot_3d_montage.html#mne_nirs.visualisation.plot_3d_montage" title="mne_nirs.visualisation.plot_3d_montage" class="sphx-glr-backref-module-mne_nirs-visualisation sphx-glr-backref-type-py-function"><span class="n">mne_nirs</span><span class="o">.</span><span class="n">visualisation</span><span class="o">.</span><span class="n">plot_3d_montage</span></a><span class="p">(</span>
     <a href="https://mne.tools/stable/generated/mne.Info.html#mne.Info" title="mne.Info" class="sphx-glr-backref-module-mne sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">raw</span><span class="o">.</span><span class="n">info</span></a><span class="p">,</span> <a href="https://docs.python.org/3/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">view_map</span></a><span class="o">=</span><a href="https://docs.python.org/3/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">view_map</span></a><span class="p">,</span> <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">subjects_dir</span></a><span class="o">=</span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">subjects_dir</span></a><span class="p">)</span>
 </pre></div>
 </div>
@@ -895,8 +879,8 @@ in green and blue respectively.</p>
 </dd>
 </dl>
 </p>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 1 minutes  40.420 seconds)</p>
-<p><strong>Estimated memory usage:</strong>  37 MB</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 1 minutes  35.376 seconds)</p>
+<p><strong>Estimated memory usage:</strong>  38 MB</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-general-plot-70-visualise-brain-py">
 <div class="binder-badge docutils container">
 <a class="reference external image-reference" href="https://mybinder.org/v2/gh/mne-tools/mne-nirs/gh-pages?filepath=notebooks/auto_examples/general/plot_70_visualise_brain.ipynb"><img alt="Launch binder" src="../../_images/binder_badge_logo.svg" width="150px" /></a>
@@ -948,7 +932,7 @@ in green and blue respectively.</p>
     
     <div class="footer-item">
       <p class="copyright">
-    &copy; Copyright 2012–2022, MNE Developers. Last updated &lt;time datetime=&#34;2022-03-07T23:55:29.359461+00:00&#34; class=&#34;localized&#34;&gt;2022-03-07 23:55 UTC&lt;/time&gt;
+    &copy; Copyright 2012–2022, MNE Developers. Last updated &lt;time datetime=&#34;2022-03-10T22:24:12.875779+00:00&#34; class=&#34;localized&#34;&gt;2022-03-10 22:24 UTC&lt;/time&gt;
 &lt;script type=&#34;text/javascript&#34;&gt;$(function () { $(&#34;time.localized&#34;).each(function () { var el = $(this); el.text(new Date(el.attr(&#34;datetime&#34;)).toLocaleString([], {dateStyle: &#34;medium&#34;, timeStyle: &#34;long&#34;})); }); } )&lt;/script&gt;.<br>
 </p>
     </div>

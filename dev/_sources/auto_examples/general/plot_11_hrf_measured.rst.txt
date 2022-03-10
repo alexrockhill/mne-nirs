@@ -1032,7 +1032,7 @@ cortical surface
  .. code-block:: none
 
 
-    <mne.viz._brain._brain.Brain object at 0x7f6e1c940760>
+    <mne.viz._brain._brain.Brain object at 0x7f2d545fd760>
 
 
 
@@ -1547,9 +1547,9 @@ the tapping, but we do expect 5% or less for the false positive rate.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  15.282 seconds)
+   **Total running time of the script:** ( 0 minutes  17.654 seconds)
 
-**Estimated memory usage:**  382 MB
+**Estimated memory usage:**  384 MB
 
 
 .. _sphx_glr_download_auto_examples_general_plot_11_hrf_measured.py:

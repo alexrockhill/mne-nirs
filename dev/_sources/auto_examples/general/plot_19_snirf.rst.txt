@@ -169,7 +169,7 @@ ensure that the values are the same.
  .. code-block:: none
 
 
-    <mne_qt_browser._pg_figure.PyQtGraphBrowser object at 0x7f6e1c6c4d30>
+    <mne_qt_browser._pg_figure.PyQtGraphBrowser object at 0x7f2d5e85aa60>
 
 
 
@@ -200,7 +200,7 @@ by MNE-NIRS are compliant with the specification.
 
  .. code-block:: none
 
-    <pysnirf2.pysnirf2.ValidationResult object at 0x7f6e1c90bdf0>
+    <pysnirf2.pysnirf2.ValidationResult object at 0x7f2dd5f22250>
 
     Found 304 OK      (hidden)
     Found 522 INFO    (hidden)
@@ -215,9 +215,9 @@ by MNE-NIRS are compliant with the specification.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  4.580 seconds)
+   **Total running time of the script:** ( 0 minutes  4.821 seconds)
 
-**Estimated memory usage:**  12 MB
+**Estimated memory usage:**  10 MB
 
 
 .. _sphx_glr_download_auto_examples_general_plot_19_snirf.py:
